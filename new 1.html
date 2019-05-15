@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+	background-color:white;
+}
+#wgtmsr{
+  width:60px;  
+}
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+.addrule {color: green;}
+
+.button {
+  background-color: #FFFFFF; /* white */
+  border: black;
+  color: black;
+  padding: 10x;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10x;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {border-radius: 80%;}
+.button2 {border-radius: 80%;}
+
+.bttn {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirm {background-color: #FFA500;} /* Orange */
+.cancel {background-color: #A9A9A9;} /* Grey */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Add Revenue Group</h2>
+
+<form>
+  <b>Revenue Group Title</b><br>
+  <br><input type="text" name="revenue group title" size="80"><br>
+  <br>
+</form>
+
+<form action="/action_page.php">
+  <p>If</p>
+  <select category="categories">
+    <option value="All">All</option>
+    <option value="Category A">Category A</option>
+    <option value="Category B">Category B</option>
+    <option value="Category C">Category C</option>
+	</select><p>of the below conditions are met</p>
+</form>
+<b><p>RULE 1</b></p>
+<div style="background-color:lightgrey">
+  <select sub-category="sub-categories">
+    <option value="aff_sub">aff_sub</option>
+    <option value="aff_sub1">aff_sub1</option>
+    <option value="aff_sub2">aff_sub2</option>
+    <option value="aff_sub3">aff_sub3</option>
+	</select>
+    <select name="wgtmsr" id="wgtmsr">
+    <option value="is">is</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  <form>
+	<input type="text" name="parameter" placeholder="insert parameter" size="40">
+    <button class="btn addrule">add rule</button>
+    <button class="button button1">-</button>
+    <button class="button button2">+</button>
+</form>
+</br>
+</select>
+</div>
+  <p>then revenue is</p>
+ <br><input type="number" placeholder="%" size="18"></br>
+ 
+ <br><button class="bttn confirm">Confirm</button>
+ <button class="bttn cancel">Cancel</button></br>
+ <div id="overlay" onclick="off()"></div>
+
+<div style="padding:20px">
+
+  <button onclick="on()">overlay effect</button>
+</div>
+ <script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+</script>
+  
+</body>
+</html>
